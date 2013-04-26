@@ -36,7 +36,11 @@ when "debian"
     keyserver "hkp://keyserver.ubuntu.com:80"
     key "7F0CEB10"
     action :add
-    notifies :run, "execute[apt-get update]", :immediately
+    #notifies :run, "execute[apt-get update]", :immediately
+    #execute "apt-get update" 
+    #notifies :create, resources(:ruby_block => "update-java-alternatives")
+    #notifies :restart, resources(:service => 'apache2')
+    notifies :run, resources(:execute => 'apt-get update'), :immediately
   end
 
 when "rhel","fedora"
