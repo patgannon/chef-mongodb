@@ -17,8 +17,8 @@
 # limitations under the License.
 #
 
-default[:mongodb][:dbpath] = "/var/lib/mongodb"
-default[:mongodb][:logpath] = "/var/log/mongodb"
+default[:mongodb][:dbpath] = "/vol/ebs1/db"
+default[:mongodb][:logpath] = "/vol/ebs1/log"
 default[:mongodb][:bind_ip] = nil
 default[:mongodb][:port] = 27017
 
