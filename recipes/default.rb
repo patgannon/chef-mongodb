@@ -33,7 +33,7 @@ if needs_mongo_gem
   Gem.clear_paths
 end
 
-if node.recipes.include?("mongodb::default") or node.recipes.include?("mongodb")
+#if node.recipes.include?("mongodb::default") or node.recipes.include?("mongodb")
   # configure default instance
   mongodb_instance "mongodb" do
     mongodb_type "mongod"
@@ -43,4 +43,4 @@ if node.recipes.include?("mongodb::default") or node.recipes.include?("mongodb")
     dbpath       node['mongodb']['dbpath']
     enable_rest  node['mongodb']['enable_rest']
   end
-end
+#end
