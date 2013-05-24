@@ -19,7 +19,7 @@
 # limitations under the License.
 #
 
-define :mongodb_instance, :mongodb_type => "mongod" , :action => [:enable, :start],
+define :mongodb_instance, :mongodb_type => "mongod" , :action => [:enable, :start, :restart],
     :bind_ip => nil, :port => 27017 , :logpath => "/var/log/mongodb",
     :dbpath => "/data", :configfile => "/etc/mongodb.conf", :configserver => [],
     :replicaset => nil, :enable_rest => false, :notifies => [] do
